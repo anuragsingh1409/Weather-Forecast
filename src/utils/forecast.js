@@ -8,7 +8,8 @@ const forecast = (latitude,longitude,callback)=>{
         }else if(body.message){
             callback('Unable to find location!')
         }else{
-                callback(undefined,'The weather report is: '+body.weather[0].description+ '. The temperature is '+body.main.temp+ ' degrees out.')
+                callback(undefined,'The weather report is: '+body.weather[0].description+ '. The temperature is '+body.main.temp+ ' degrees out. The daily high is '+body.main.temp_max+' and daily low is '+body.main.temp_min)
+                
         
         }
     })

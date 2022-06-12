@@ -3,7 +3,7 @@ const request = require('request')
 
 const geoCode = (address,callback)=>{
     const geoCodeurl = 'https://api.mapbox.com/geocoding/v5/mapbox.places/'+ address +'.json?access_token=pk.eyJ1IjoiYW51cmFnMTQwOSIsImEiOiJjbDNwZDNqMXYweDdzM2NsOG9veGpubWd2In0.kbf-Eav3SkbCD9N7-xkMaA'
-    request({url: geoCodeurl,json: true},(error,{body})=>{
+    request({url: geoCodeurl,json: true},(error,{body}={})=>{
          if(error)
          {
             callback('Unable to connect to internet!')
